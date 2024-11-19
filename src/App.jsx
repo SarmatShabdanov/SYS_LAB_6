@@ -1,30 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ProductCard } from "./components/ProductCard";
 
-
-const products = 
-[
-    {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDnDmOn2CgBYYBjjMiQWd8T-vb1rlBorPdZw&s",
-    name:"Brabus",
-    price: 190000
-    },
-
-    {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKFSiVBoOvjZWhxA5LWVrQrKAmC2PQPX9DKg&s",
-        name:"BMW",
-        price: 100000
-    }
-
-]
+const products = [];
 
 export function App(props) {
-    return (
-        <div>
-        {products.map((product) => (
-                        <ProductCard data = {product} />
-                    ))}
-        </div>
-        
-    );
+    const[loading,setLoading] = useState(true)
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products/")
+      .then((res) => res.json())
+      .then((json) => setProducts(json))
+      .finally(()=> setLoading(false));
+  }, []);
+
+  return (
+    <div>
+      {products.map((product) => (
+        <ProductCard data={product} />
+      ))}
+    </div>
+  );
 }
