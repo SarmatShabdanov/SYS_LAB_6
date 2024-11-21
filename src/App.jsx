@@ -15,7 +15,7 @@ export function App(props) {
   }, []);
 
   return (
-    <div>
+    <div class = "cont">
       {products.map((product) => (
         <ProductCard data={product} />
       ))}
