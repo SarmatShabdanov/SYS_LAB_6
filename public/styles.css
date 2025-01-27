@@ -5,3 +5,11 @@
     justify-items: center;
     font-family: Inter;
 }
+
+.cart-cont{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-items: center;
+    font-family: Inter;
+}

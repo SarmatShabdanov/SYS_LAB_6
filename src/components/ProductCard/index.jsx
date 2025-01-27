@@ -1,15 +1,16 @@
 import "./index.css"
-export function ProductCard(props) {
-    return(
-        <div className="product-card">
-                            <img src={props.data.image} alt="" />
-                            <p>{props.data.category}</p>
-                            <h4>{props.data.title}</h4>
-                            <div class = "pricing">
-                            <span>${props.data.price}</span>
-                            <button>Add to Cart</button>
-                            </div>
-                            
+import { Button } from "../Button";
+export function ProductCard({ data, addToCart }) {
+    return (
+      <div className="product-card">
+        <img src={data.image} alt={data.title} />
+        <div className="product-info">
+          <p className="category">{data.category}</p>
+          <p className="title">{data.title}</p>
+          <p className="price">${data.price}</p>
+          <Button variant = 'bordered' onClick={() => addToCart(data)}>Add to Cart</Button>
         </div>
-    )
-}
+      </div>
+    );
+  }
+  

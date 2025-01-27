@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.incrementer-cont{
+    border-width:1px;
+    border-style:solid;
+    border-color:#4169E1;
+    border-radius:10px ;
+    width: 144px;  
+    height: 41px;
+}
+.incrementer-cont{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.incrementer-cont>span{
+    color: #4169E1;
+    font-family: Inter;
+    font-size: 16px;
+}
+.incrementer-button{
+    font-size: 16px;
+    border: none;
+    background: none;
+    color: #4169E1;
+    cursor: pointer;
+}
+
+.incrementer-cont:hover{
+    border-width:2px;
+     
+}

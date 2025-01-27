@@ -1,7 +1,8 @@
-
-
-
-
+.button-cont{
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+}
 .product-card {
     width: 300px;
     height: 450px;
@@ -11,6 +12,7 @@
     padding: 4px;
     border: 2px solid #dcd4d4; 
 }
+
 
 .product-card:hover {
     border: 2px solid blue; 
