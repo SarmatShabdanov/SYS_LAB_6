@@ -58,7 +58,7 @@ export function App(props) {
         )}
       </div>
 
-      <div>
+      <div class = 'cart-title'>
         <p>Cart</p>
       </div>
 
