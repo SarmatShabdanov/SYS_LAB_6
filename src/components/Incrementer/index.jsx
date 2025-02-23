@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import './index.css';
 
-export function Incrementer() {
+export function Incrementer(props) {
     const [quantity, setQuantity] = useState(1);
+    const {visibility} = props;
+    const className = `incrementer-cont incrementer-cont--${visibility}`
     const addProduct = () => {
        setQuantity(prevQuantity => prevQuantity + 1);
        
@@ -14,10 +16,10 @@ export function Incrementer() {
     };
 
     return (
-        <div className='incrementer-cont'>
-            <button className='incrementer-button' onClick={removeProduct}>-</button>
+        <div className={className}>
+            <button class='incrementer-button' onClick={removeProduct}>-</button>
             <span>{quantity}</span>
-            <button className='incrementer-button' onClick={addProduct}>+</button>
+            <button class='incrementer-button' onClick={addProduct}>+</button>
         </div>
     );
 }

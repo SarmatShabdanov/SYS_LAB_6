@@ -30,3 +30,10 @@
     border-width:2px;
      
 }
+.incrementer-cont--hidden{
+    display: none;
+}
+
+.incrementer-cont--visible{
+    display: flex;
+}
